@@ -1,4 +1,4 @@
-<?php
+w<?php
 
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
@@ -17,7 +17,7 @@ return new class extends Migration
             $table-> string('apellido' , 255);
             $table-> string('rol' , 255);
             $table-> string('fecha_incorporacion' , 255);
-            $table->foreignId('viajes_id');
+            $table->foreignId('viaje_id');
         });
     }
 
