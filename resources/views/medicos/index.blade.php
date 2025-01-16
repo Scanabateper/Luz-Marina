@@ -9,18 +9,22 @@
 <table class="table table-striped">
     <thead>
         <tr>
+            <th>ID</th>
             <th>Nombre</th>
             <th>Apellido</th>
             <th>Fecha de Incorporación</th>
+            <th>Viaje Asociado</th>
             <th>Acciones</th>
         </tr>
     </thead>
     <tbody>
         @foreach ($medicos as $medico)
             <tr>
+                <td>{{ $medico->id }}</td>
                 <td>{{ $medico->nombre }}</td>
                 <td>{{ $medico->apellido }}</td>
                 <td>{{ $medico->fecha_incorporacion }}</td>
+                <td>{{ $medico->viaje_id }}</td>
                 <td>
                     <a href="{{ route('medicos.show', $medico->id) }}" class="btn btn-info btn-sm">Ver</a>
                     <a href="{{ route('medicos.edit', $medico->id) }}" class="btn btn-warning btn-sm">Editar</a>
