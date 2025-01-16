@@ -13,8 +13,8 @@ return new class extends Migration
     {
         Schema::create('rescates', function (Blueprint $table) {
             $table->id();
-            $table-> string('origen' , 255);
-            $table-> string('destino' , 255);
+            $table-> string('fecha_inicio' , 255);
+            $table-> string('fecha_fin' , 255);
         });
     }
 
