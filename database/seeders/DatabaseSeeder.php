@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Tripulante;
 use App\Models\User;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
@@ -13,12 +14,6 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        $this->call([
-            Medicos::class,
-            Rescatados::class,
-            Rescates::class,
-            Tripulantes::class,
-            Viajes::class
-        ]);
+        Tripulante::factory(50)->create();
     }
 }

@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table-> string('fecha_inicio' , 255);
             $table-> string('fecha_fin' , 255);
+            $table->timestamps();
         });
     }
 

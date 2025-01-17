@@ -21,6 +21,7 @@ return new class extends Migration
             $table-> string('valoracion_medica' , 255);
             $table->foreignId('medico_id');
             $table->foreignId('rescate_id');
+            $table->timestamps();
 
         });
     }

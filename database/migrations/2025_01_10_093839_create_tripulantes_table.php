@@ -18,6 +18,7 @@ return new class extends Migration
             $table-> string('rol' , 255);
             $table-> string('fecha_incorporacion' , 255);
             $table->foreignId('viaje_id');
+            $table->timestamps(); //METELA EN TODOS LADOS :) !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
         });
     }
 

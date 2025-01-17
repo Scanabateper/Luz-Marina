@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('origen',255);
             $table->string('destino',255);
+            $table->timestamps();
         });
     }
 
