@@ -11,11 +11,10 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('medicos', function (Blueprint $table) {
+        Schema::create('medicos_viaje', function (Blueprint $table) {
             $table->id();
-            $table->string('nombre' ,255);
-            $table->string('apellido' ,255);
-            $table->string('fecha_incorporacion' ,255);
+            $table->foreignId('medico_id')->constrained()->onDelete('cascade'); // Clave foránea hacia la tabla `medicos`
+            $table->foreignId('viaje_id')->constrained()->onDelete('cascade'); // Clave foránea hacia la tabla `viajes`
             $table->timestamps();
         });
     }
@@ -25,6 +24,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('medicos');
+        Schema::dropIfExists('medicos_viaje');
     }
 };

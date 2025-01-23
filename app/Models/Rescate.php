@@ -9,8 +9,11 @@ class Rescate extends Model
 {
     use HasFactory;
 
-
-    public function post(){
-        return $this->hasMany('App\Models\Rescatado');
+    public function viaje(){
+        return $this->belongsTo(Viaje::class);
+    }
+  
+    public function rescatados(){
+        return $this->hasMany(Rescatado::class);
     }
 }

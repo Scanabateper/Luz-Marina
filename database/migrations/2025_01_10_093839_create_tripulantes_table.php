@@ -13,13 +13,11 @@ return new class extends Migration
     {
         Schema::create('tripulantes', function (Blueprint $table) {
             $table->id();
-            $table-> string('nombre' , 255);
-            $table-> string('apellido' , 255);
-            $table-> string('rol' , 255);
-            $table-> string('fecha_incorporacion' , 255);
-            $table->unsignedBigInteger('viaje_id');
-            $table->foreign('viaje_id')->references('id')->on('viajes');
-            $table->timestamps(); //METELA EN TODOS LADOS :) !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+            $table->string('nombre', 255);
+            $table->string('apellido', 255);
+            $table->string('rol', 255);
+            $table->string('fecha_incorporacion', 255);
+            $table->timestamps(); // Asegúrate de incluir esto en todas las tablas
         });
     }
 

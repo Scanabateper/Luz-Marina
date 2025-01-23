@@ -61,4 +61,23 @@ class RescateController extends Controller
     {
         //
     }
+
+    public function mostrarViajes($id)
+    {
+        // Obtener el tripulante por su ID
+        $tripulante = Tripulante::find($id);
+        
+        // Obtener todos los viajes del tripulante
+        $viajes = $tripulante->viajes;
+
+        // Devolver los viajes a la vista (o como JSON)
+        return view('tripulante.viajes', compact('viajes'));
+        //Ejemplo en routes
+        
+        //use App\Http\Controllers\TripulanteController;
+
+        //Route::get('/tripulantes/{id}/viajes', [TripulanteController::class, 'mostrarViajes']);
+
+    }
+
 }

@@ -13,9 +13,12 @@ return new class extends Migration
     {
         Schema::create('rescates', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('viaje_id'); // Clave foránea
             $table-> date('fecha_inicio');
             $table-> date('fecha_fin');
             $table->timestamps();
+            // Definir la clave foránea
+            $table->foreign('viaje_id')->references('id')->on('viajes')->onDelete('cascade');
         });
     }
 

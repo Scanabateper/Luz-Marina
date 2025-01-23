@@ -8,8 +8,18 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 class Viaje extends Model
 {
    use HasFactory;
-   public function viaje(){
-      return $this->belongsTo('App\Models\Viaje');
 
+   public function tripulantes(){
+      return $this->belongsToMany(Tripulante::class);
   }
+
+  public function medicos(){
+   return $this->belongsToMany(Medico::class);
+}
+
+
+    public function rescatados(){
+        return $this->hasMany(Rescatado::class);
+    }
+    
 }
