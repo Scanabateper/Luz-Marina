@@ -11,6 +11,6 @@ class Rescate extends Model
 
 
     public function post(){
-        return $this->hasMany('App/Models/Rescatado');
+        return $this->hasMany('App\Models\Rescatado');
     }
 }

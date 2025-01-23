@@ -9,7 +9,7 @@ class Rescatado extends Model
 {
     use HasFactory;
     public function rescate(){
-        return $this->belongsTo('App/Models/Rescatado');
+        return $this->belongsTo('App\Models\Rescatado');
 
     }
 }
