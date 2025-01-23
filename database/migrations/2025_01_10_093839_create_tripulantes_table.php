@@ -17,7 +17,8 @@ return new class extends Migration
             $table-> string('apellido' , 255);
             $table-> string('rol' , 255);
             $table-> string('fecha_incorporacion' , 255);
-            $table->foreignId('viaje_id');
+            $table->unsignedBigInteger('viaje_id');
+            $table->foreign('viaje_id')->references('id')->on('viajes');
             $table->timestamps(); //METELA EN TODOS LADOS :) !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
         });
     }

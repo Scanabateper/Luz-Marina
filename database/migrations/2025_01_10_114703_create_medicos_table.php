@@ -16,7 +16,8 @@ return new class extends Migration
             $table->string('nombre' ,255);
             $table->string('apellido' ,255);
             $table->string('fecha_incorporacion' ,255);
-            $table->foreignId('viaje_id');
+            $table->unsignedBigInteger('viaje_id');
+            $table->foreign('viaje_id')->references('id')->on('viajes');
             $table->timestamps();
         });
     }

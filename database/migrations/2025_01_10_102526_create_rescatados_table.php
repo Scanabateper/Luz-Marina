@@ -19,8 +19,10 @@ return new class extends Migration
             $table-> string('sexo', 255);
             $table-> string('procedencia' , 255);
             $table-> string('valoracion_medica' , 255);
-            $table->foreignId('medico_id');
-            $table->foreignId('rescate_id');
+            $table->unsignedBigInteger('medico_id');
+            $table->unsignedBigInteger('rescate_id');
+            $table->foreign('medico_id')->references('id')->on('medicos');
+            $table->foreign('rescate_id')->references('id')->on('rescates');
             $table->timestamps();
 
         });

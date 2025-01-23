@@ -16,4 +16,7 @@ class Tripulante extends Model
 
 
         //return $this->belongsTo(Viaje::class, 'viaje_id'); }
+        public function post(){
+            return $this->hasMany('App/Models/Viaje');
+        }
 }
